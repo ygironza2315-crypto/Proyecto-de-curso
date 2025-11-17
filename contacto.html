@@ -10,38 +10,29 @@
   <header class="site-header">
     <h1 class="brand">Venta de accesorios de PC</h1>
     <nav class="main-nav">
-  <ul>
-    <li>
-      <a class="btn primary" href="index.html">
-        <img src="images/Inicio.png" alt="Inicio" class="nav-icon-img" />
-        Inicio
-      </a>
-    </li>
-    <li>
-      <a class="btn primary" href="productos.html">
-        <img src="images/Productos.png" alt="Productos" class="nav-icon-img" />
-        Productos
-      </a>
-    </li>
-    <li>
-      <a class="btn primary" href="contacto.html">
-        <img src="images/Contacto.png" alt="Contacto" class="nav-icon-img" />
-        Contacto
-      </a>
-    </li>
-    <li>
-      <a class="btn primary" href="carrito.html">
-        Ver carrito
-        <img src="images/carrito.png" alt="Carrito" class="cart-icon-img" />
-      </a>
-    </li>
-  </ul>
-</nav>
-
+      <ul>
+        <li><a class="btn primary" href="index.html">
+          <img src="images/Inicio.png" alt="Inicio" class="nav-icon-img" />
+          Inicio
+        </a></li>
+        <li><a class="btn primary" href="productos.html">
+          <img src="images/Productos.png" alt="Productos" class="nav-icon-img" />
+          Productos
+        </a></li>
+        <li><a class="btn primary" href="contacto.html">
+          <img src="images/Contacto.png" alt="Contacto" class="nav-icon-img" />
+          Contacto
+        </a></li>
+        <li><a class="btn primary" href="carrito.html">
+          Ver carrito
+          <img src="images/carrito.png" alt="Carrito" class="cart-icon-img" />
+        </a></li>
+      </ul>
+    </nav>
   </header>
   <main class="container">
     <h2 class="section-title">Contacto</h2>
-    <form action="https://formspree.io/f/mdkyanwa" method="POST">
+    <form id="contact-form"> <input type="hidden" id="contact-id" />
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" name="nombre" required />
       <label for="email">Correo electrónico:</label>
@@ -49,10 +40,13 @@
       <label for="mensaje">Mensaje:</label>
       <textarea id="mensaje" name="mensaje" required></textarea>
       <button type="submit">Enviar mensaje</button>
+      <button type="button" id="cancel-edit" style="display:none;">Cancelar edición</button>
+      <ul id="contact-list"></ul>
     </form>
   </main>
   <footer class="site-footer">
     <p>© 2025 Tienda de PC</p>
   </footer>
+  <script src="js/contact.js"></script>
 </body>
 </html>
