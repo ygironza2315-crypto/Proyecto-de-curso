@@ -13,14 +13,16 @@ function fetchContacts() {
       data.forEach(contact => {
         const li = document.createElement('li');
         li.textContent = `${contact.nombre} - ${contact.email} - ${contact.mensaje}`;
-        
+
         const editBtn = document.createElement('button');
+        editBtn.type = "button";
         editBtn.textContent = 'Editar';
         editBtn.onclick = () => loadContactForEdit(contact);
 
         const deleteBtn = document.createElement('button');
+        deleteBtn.type = "button";
         deleteBtn.textContent = 'Eliminar';
-        deleteBtn.onclick = () => deleteContact(contact.id);
+        deleteBtn.onclick = () => deleteContact(contact.id); // Solo alerta
 
         li.appendChild(editBtn);
         li.appendChild(deleteBtn);
@@ -32,17 +34,17 @@ function fetchContacts() {
 
 function loadContactForEdit(contact) {
   contactIdInput.value = contact.id;
-  form.nombre.value = contact.nombre;
-  form.email.value = contact.email;
-  form.mensaje.value = contact.mensaje;
+  form.elements['nombre'].value = contact.nombre;
+  form.elements['email'].value = contact.email;
+  form.elements['mensaje'].value = contact.mensaje;
   cancelBtn.style.display = 'inline';
 }
 
 function resetForm() {
   contactIdInput.value = '';
-  form.nombre.value = '';
-  form.email.value = '';
-  form.mensaje.value = '';
+  form.elements['nombre'].value = '';
+  form.elements['email'].value = '';
+  form.elements['mensaje'].value = '';
   cancelBtn.style.display = 'none';
 }
 
@@ -71,7 +73,9 @@ form.addEventListener('submit', e => {
   .then(res => res.json())
   .then(() => {
     resetForm();
-    fetchContacts();
+    if (id) {
+      fetchContacts();
+    }
   })
   .catch(console.error);
 });
@@ -79,12 +83,7 @@ form.addEventListener('submit', e => {
 cancelBtn.onclick = () => resetForm();
 
 function deleteContact(id) {
-  if (!confirm('¿Seguro que quieres eliminar este contacto?')) return;
-  fetch(`${API_URL}/${id}`, { method: 'DELETE' })
-    .then(res => res.json())
-    .then(() => fetchContacts())
-    .catch(console.error);
+  alert('Esta acción está deshabilitada. El contacto no se eliminará.');
+  // No hace nada
 }
 
-// Cargar contactos inicial
-fetchContacts();

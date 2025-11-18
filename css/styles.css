@@ -361,3 +361,61 @@ form button[type="submit"]:hover {
     padding: 1rem;
   }
 }
+.product-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #ececec;
+  gap: 20px;
+}
+
+.product-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-actions button {
+  margin-right: 8px;
+  margin-bottom: 6px;
+}
+
+.form-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 18px;
+  align-items: stretch;
+}
+
+/* adapta inputs y botones */
+.form-vertical input,
+.form-vertical button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #d0d4e3;
+  outline: none;
+}
+
+.form-vertical button {
+  background: #288ddb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.form-vertical button:hover {
+  background: #1769a6;
+}

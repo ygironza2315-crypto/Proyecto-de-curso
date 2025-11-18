@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Venta de accesorios de PC - Contacto</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Venta de accesorios de PC - Contacto</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <h1 class="brand">Venta de accesorios de PC</h1>
-    <nav class="main-nav">
-      <ul>
-        <li><a class="btn primary" href="index.html">
-          <img src="images/Inicio.png" alt="Inicio" class="nav-icon-img" />
-          Inicio
-        </a></li>
-        <li><a class="btn primary" href="productos.html">
-          <img src="images/Productos.png" alt="Productos" class="nav-icon-img" />
-          Productos
-        </a></li>
-        <li><a class="btn primary" href="contacto.html">
-          <img src="images/Contacto.png" alt="Contacto" class="nav-icon-img" />
-          Contacto
-        </a></li>
-        <li><a class="btn primary" href="carrito.html">
-          Ver carrito
-          <img src="images/carrito.png" alt="Carrito" class="cart-icon-img" />
-        </a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="container">
-    <h2 class="section-title">Contacto</h2>
-    <form id="contact-form"> <input type="hidden" id="contact-id" />
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required />
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" required />
-      <label for="mensaje">Mensaje:</label>
-      <textarea id="mensaje" name="mensaje" required></textarea>
-      <button type="submit">Enviar mensaje</button>
+  <header class="site-header">
+    <h1 class="brand">Venta de accesorios de PC</h1>
+    <nav class="main-nav">
+      <ul>
+        <li><a class="btn primary" href="index.html">
+          <img src="images/Inicio.png" alt="Inicio" class="nav-icon-img" />
+          Inicio
+        </a></li>
+        <li><a class="btn primary" href="productos.html">
+          <img src="images/Productos.png" alt="Productos" class="nav-icon-img" />
+          Productos
+        </a></li>
+        <li><a class="btn primary" href="contacto.html">
+          <img src="images/Contacto.png" alt="Contacto" class="nav-icon-img" />
+          Contacto
+        </a></li>
+        <li><a class="btn primary" href="carrito.html">
+          Ver carrito
+          <img src="images/carrito.png" alt="Carrito" class="cart-icon-img" />
+        </a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <h2 class="section-title">Contacto</h2>
+    <form id="contact-form">
+      <input type="hidden" id="contact-id" />
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required autocomplete="name" />
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required autocomplete="email" />
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required autocomplete="on"></textarea>
+      <button type="submit">Enviar mensaje</button>
       <button type="button" id="cancel-edit" style="display:none;">Cancelar edición</button>
       <ul id="contact-list"></ul>
-    </form>
-  </main>
-  <footer class="site-footer">
-    <p>© 2025 Tienda de PC</p>
-  </footer>
+    </form>
+  </main>
+  <footer class="site-footer">
+    <p>© 2025 Tienda de PC</p>
+  </footer>
   <script src="js/contact.js"></script>
 </body>
 </html>

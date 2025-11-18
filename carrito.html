@@ -10,58 +10,63 @@
   <header class="site-header">
     <h1 class="brand">Venta de accesorios de PC</h1>
     <nav class="main-nav">
-  <ul>
-    <li>
-      <a class="btn primary" href="index.html">
-        <img src="images/Inicio.png" alt="Inicio" class="nav-icon-img" />
-        Inicio
-      </a>
-    </li>
-    <li>
-      <a class="btn primary" href="productos.html">
-        <img src="images/Productos.png" alt="Productos" class="nav-icon-img" />
-        Productos
-      </a>
-    </li>
-    <li>
-      <a class="btn primary" href="contacto.html">
-        <img src="images/Contacto.png" alt="Contacto" class="nav-icon-img" />
-        Contacto
-      </a>
-    </li>
-    <li>
-      <a class="btn primary" href="carrito.html">
-        Ver carrito
-        <img src="images/carrito.png" alt="Carrito" class="cart-icon-img" />
-      </a>
-    </li>
-  </ul>
-</nav>
-
+      <ul>
+        <li>
+          <a class="btn primary" href="index.html">
+            <img src="images/Inicio.png" alt="Inicio" class="nav-icon-img" />
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a class="btn primary" href="productos.html">
+            <img src="images/Productos.png" alt="Productos" class="nav-icon-img" />
+            Productos
+          </a>
+        </li>
+        <li>
+          <a class="btn primary" href="contacto.html">
+            <img src="images/Contacto.png" alt="Contacto" class="nav-icon-img" />
+            Contacto
+          </a>
+        </li>
+        <li>
+          <a class="btn primary" href="carrito.html">
+            Ver carrito
+            <img src="images/carrito.png" alt="Carrito" class="cart-icon-img" />
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
-<main class="container">
-  <h2 class="section-title">Carrito de compras</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Imagen</th>
-        <th>Producto</th>
-        <th>Cantidad</th>
-        <th>Precio</th>
-        <th>Total</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody id="cart-body">
-    </tbody>
-  </table>
-  <button id="clear-cart">Vaciar carrito</button>
-  <button id="checkout" disabled>Pagar</button>
-</main>
+
+  <main class="container">
+    <h2 class="section-title">Carrito de compras</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Imagen</th>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th>Total</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="cart-body"></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4" style="text-align:right"><strong>Total:</strong></td>
+          <td id="cart-total" colspan="2"><strong>$0</strong></td>
+        </tr>
+      </tfoot>
+    </table>
+    <button id="clear-cart">Vaciar carrito</button>
+    <button id="checkout" disabled>Pagar</button>
+  </main>
 
   <footer class="site-footer">
     <p>© 2025 Tienda de PC</p>
   </footer>
-  <script src="js/cart.js"></script>
+  <script src="js/carrito.js"></script>
 </body>
 </html>
